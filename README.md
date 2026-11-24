@@ -9,7 +9,6 @@
 | Image Docker | `ardhptr21/alpinet` (router), `ardhptr21/debinet` (host) |
 | Script | `/root/<nama-node>.sh` di tiap node, salinannya ada di folder `scripts/` |
 
-Bagian ini mendokumentasikan soal 1-10. Soal 11-20 dikerjakan partner kelompok.
 
 ---
 
