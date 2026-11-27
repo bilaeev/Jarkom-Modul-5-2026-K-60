@@ -680,12 +680,6 @@ Gendou:~# iptables -t nat -L POSTROUTING -n -v      (sebelum, lalu setelah ping 
    58  4178 MASQUERADE all  --  *   eth0  192.241.56.0/21  0.0.0.0/0
 ```
 
-# Laporan Praktikum Keamanan Jaringan — Konfigurasi Firewall (Soal 11–20)
-
-Dokumentasi ini berisi konfigurasi firewall berbasis `iptables`, metode pengujian, indikator keberhasilan, serta bukti *screenshot* output per soal pada topologi jaringan NERV.
-
-## Daftar Isi
-
 * [Nomor 11 — Hardening Magi-Casper](#nomor-11--hardening-magi-casper)
 * [Nomor 12 — Analisis & Pemulihan Sabotase Magi-Casper](#nomor-12--analisis--pemulihan-sabotase-magi-casper)
 * [Nomor 13 — Brankas Magi-Balthasar](#nomor-13--brankas-magi-balthasar)
@@ -699,7 +693,7 @@ Dokumentasi ini berisi konfigurasi firewall berbasis `iptables`, metode pengujia
 
 ---
 
-## Nomor 11 — Hardening Magi-Casper
+## Nomor 11  Hardening Magi-Casper
 
 ### Target Node
 * **Magi-Casper** (`192.241.60.58`)
@@ -748,7 +742,7 @@ chmod +x /root/magi-casper.sh && bash /root/magi-casper.sh
 
 ---
 
-## Nomor 12 — Analisis & Pemulihan Sabotase Magi-Casper
+## Nomor 12  Analisis & Pemulihan Sabotase Magi-Casper
 
 ### Target Node
 * **Magi-Casper** (`192.241.60.58`)
@@ -780,7 +774,7 @@ bash /root/magi-casper.sh
 
 ---
 
-## Nomor 13 — Brankas Magi-Balthasar
+## Nomor 13  Brankas Magi-Balthasar
 
 ### Target Node
 * **Magi-Balthasar** (`192.241.60.59`)
@@ -830,7 +824,7 @@ chmod +x /root/magi-balthasar.sh && bash /root/magi-balthasar.sh
 
 ---
 
-## Nomor 14 — Pembatasan Jadwal Akses Pen-Pen
+## Nomor 14  Pembatasan Jadwal Akses Pen-Pen
 
 ### Target Node
 * **Pen-Pen** (`192.241.59.194`)
@@ -880,7 +874,7 @@ chmod +x /root/pen-pen.sh && bash /root/pen-pen.sh
 
 ---
 
-## Nomor 15 — Rate Limit ICMP Tokyo3-Core
+## Nomor 15  Rate Limit ICMP Tokyo3-Core
 
 ### Target Node
 * **Tokyo3-Core** (`192.241.60.106`)
@@ -909,7 +903,7 @@ iptables -A INPUT -p icmp --icmp-type echo-request -j DROP
 
 ---
 
-## Nomor 16 — Deteksi Port Scanning & Logging Tokyo3-Core
+## Nomor 16  Deteksi Port Scanning & Logging Tokyo3-Core
 
 ### Target Node
 * **Tokyo3-Core** (`192.241.60.106`)
@@ -960,7 +954,7 @@ chmod +x /root/tokyo3-core.sh && bash /root/tokyo3-core.sh
 
 ---
 
-## Nomor 17 — Pengalihan Paket TCP (DNAT & MASQUERADE) Fuyutsuki
+## Nomor 17  Pengalihan Paket TCP (DNAT & MASQUERADE) Fuyutsuki
 
 ### Target Node
 * **Fuyutsuki** (`192.241.60.57` / `192.241.60.110`)
@@ -1009,7 +1003,7 @@ nohup sh -c 'while true; do nc.traditional -l -p 9000 >> /root/nc-9000.log; done
 
 ---
 
-## Nomor 18 — Proteksi Gerbang Zona Sensitif Shigeru
+## Nomor 18  Proteksi Gerbang Zona Sensitif Shigeru
 
 ### Target Node
 * **Shigeru** (`eth0` menghadap ke luar/Gendou; `eth1` ke Monolith; `eth2` ke Radar)
@@ -1052,7 +1046,7 @@ chmod +x /root/shigeru.sh && sh /root/shigeru.sh
 
 ---
 
-## Nomor 19 — Isolasi Total Node Spy pada Gendou
+## Nomor 19  Isolasi Total Node Spy pada Gendou
 
 ### Target Node
 * **Gendou** (memblokir seluruh lalu lintas node **Spy** `192.241.60.102`)
@@ -1109,7 +1103,7 @@ chmod +x /root/gendou.sh && sh /root/gendou.sh
 
 ---
 
-## Nomor 20 — Otomasi Pemulihan Aturan Pasca-Reset
+## Nomor 20  Otomasi Pemulihan Aturan Pasca-Reset
 
 ### Target Node
 * Seluruh node yang memiliki aturan firewall & service:
